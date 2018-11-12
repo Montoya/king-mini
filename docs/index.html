@@ -6,14 +6,16 @@
     <meta name="description" content="A hybrid game combining the rules of chess with a classic pathfinding puzzle. Clear all the pieces to clear each board!">
     <meta name="author" content="Christian Montoya">
     <script src="//cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser.min.js"></script>
-    <style type="text/css"> body { background-color:#000; } </style>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <style type="text/css"> body { background-color:#fff; } body canvas { position:absolute; top:50%; left:50%; margin-left:-400px; margin-top:-300px; } </style>
   </head>
   <body>
-		<script>
+	<script>
     var config = {
         type: Phaser.AUTO,
         width: 800,
         height: 600,
+        backgroundColor: 0xffffff,
         physics: {
             default: 'arcade',
             arcade: {
@@ -30,17 +32,17 @@
 
     function preload ()
     {
-        this.load.setBaseURL('http://labs.phaser.io');
+        // this.load.setBaseURL('http://labs.phaser.io');
 
-        this.load.image('sky', 'assets/skies/space3.png');
-        this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-        this.load.image('red', 'assets/particles/red.png');
+        this.load.image('board', 'assets/game_board.png');
     }
 
     function create ()
     {
-        this.add.image(400, 300, 'sky');
+        this.add.image(220, 300, 'board');
 
+        this.add.text(0, 0, 'Hello World', {font:'32px PT Serif', fill:'#000'});
+/*
         var particles = this.add.particles('red');
 
         var emitter = particles.createEmitter({
@@ -55,7 +57,7 @@
         logo.setBounce(1, 1);
         logo.setCollideWorldBounds(true);
 
-        emitter.startFollow(logo);
+        emitter.startFollow(logo); */
     }
     </script>
 
