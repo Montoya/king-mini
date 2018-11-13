@@ -10,7 +10,11 @@
     <style type="text/css"> body { background-color:#fff; } body canvas { position:absolute; top:50%; left:50%; margin-left:-400px; margin-top:-300px; } </style>
   </head>
   <body>
+    <script src="js/PreloadScene.js"></script>
+    <script src="js/MenuScene.js"></script>
+    <script src="js/PlayScene.js"></script>
 	<script>
+    var scenes = [PreloadScene, MenuScene, PlayScene];
     var config = {
         type: Phaser.AUTO,
         width: 800,
@@ -22,27 +26,18 @@
                 gravity: { y: 200 }
             }
         },
-        scene: {
-            preload: preload,
-            create: create
-        }
+        scene: scenes
     };
 
     var game = new Phaser.Game(config);
-
+    /*
     function preload ()
     {
-        // this.load.setBaseURL('http://labs.phaser.io');
-
-        this.load.image('board', 'assets/game_board.png');
+        this.load.setBaseURL('http://labs.phaser.io');
     }
 
     function create ()
     {
-        this.add.image(220, 300, 'board');
-
-        this.add.text(0, 0, 'Hello World', {font:'32px PT Serif', fill:'#000'});
-/*
         var particles = this.add.particles('red');
 
         var emitter = particles.createEmitter({
@@ -57,8 +52,8 @@
         logo.setBounce(1, 1);
         logo.setCollideWorldBounds(true);
 
-        emitter.startFollow(logo); */
-    }
+        emitter.startFollow(logo);
+    } */
     </script>
 
 </body>
