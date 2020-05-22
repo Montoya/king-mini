@@ -7,7 +7,7 @@ PlayScene.create = function() {
 	this.add.image(220, 300, 'board');
 	this.add.image(180, 260, 'king');
 	this.add.image(140, 220, 'bishop');
-	this.add.text(0, 0, 'King Mini', {font:'32px PT Serif', fill:'#000'});
+	this.add.text(0, 0, 'King Mini', {font:'32px "Marcellus SC"', fill:'#000'});
 };
 
 PlayScene.update = function() {
