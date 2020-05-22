@@ -1,2 +1,3 @@
-# king-mini
-wip for https://itch.io/jam/game-off-2018
+# King Mini
+
+I don't like to play chess but I like the rules so I made a puzzle game with those rules.
