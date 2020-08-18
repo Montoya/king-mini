@@ -2,10 +2,7 @@ var PreloadScene = new Phaser.Scene('Preload');
 
 PreloadScene.preload = function() {
 	this.load.image('board', 'assets/game_board.png');
-	this.load.image('king', 'assets/king.png');
-	this.load.image('knight', 'assets/knight.png');
-	this.load.image('bishop', 'assets/bishop.png');
-	this.load.image('rook', 'assets/rook.png');
+	this.load.spritesheet('piece', 'assets/pieces.png', { frameWidth: 80, frameHeight: 80, endFrame: 3 }); 
 	this.load.script('webfont', 'js/webfontloader.js');
 };
 
